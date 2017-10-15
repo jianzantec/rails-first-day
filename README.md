@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> 实现班级信息的座次表,可以让人很直观的添加自己的位置信息.便于联系老同学,管理自己的学生信息
 
-Things you may want to cover:
+代码服务器端使用rails开发
 
-* Ruby version
+```bash
+rails db:migrate # 初始化数据库
+rails s # 启动服务器端代码
+```
 
-* System dependencies
+### 演示
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Alt text](./public/prc.gif)

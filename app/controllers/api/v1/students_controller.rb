@@ -28,14 +28,14 @@ class Api::V1::StudentsController < ApplicationController
   end
 
   def create
-    data = Student.new params.permit(:name, :grade_id, :row_id, :col_id, :gender, :mobile, :qq, :description)
+    data = Student.new params.permit(:name, :grade_id, :row_id, :col_id, :gender, :mobile, :qq, :description,:avatars)
     data.save
-    render_common_json_render("y", "新增成功", "新增学生信息成功")
+    render_common_json_render("y", "新增成功", data)
   end
 
   def update
     data = Student.find(params[:id])
-    attributes = params.permit(:name, :grade_id, :row_id, :col_id, :gender, :mobile, :qq, :description)
+    attributes = params.permit(:name, :grade_id, :row_id, :col_id, :gender, :mobile, :qq, :description,:avatars)
     data.update_attributes attributes
     render_common_json_render("y", "修改成功", "修改学生信息成功")
   end

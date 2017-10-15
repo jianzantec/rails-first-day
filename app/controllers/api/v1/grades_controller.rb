@@ -33,7 +33,7 @@ class Api::V1::GradesController < ApplicationController
         data.rows.create({name: "第#{r}行", description: ''})
       end
     end
-    render_common_json_render("y", "新增成功", "新增班级信息成功#{data.id}")
+    render_common_json_render("y", "新增成功", data.id)
   end
 
   def update
